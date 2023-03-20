@@ -19,7 +19,7 @@ module.exports = {
 
             create table countries (
                 country_id serial primary key, 
-                name varchar
+                name VARCHAR(255) NOT NULL,
             );
 
             CREATE TABLE cities (
@@ -224,7 +224,7 @@ module.exports = {
             ('Vietnam'),
             ('Yemen'),
             ('Zambia'),
-            ('Zimbabwe'),
+            ('Zimbabwe');
             INSERT INTO cities (name, rating, country_id)
             VALUES ('New York City', 5, (SELECT country_id FROM countries WHERE name = 'United States of America')),
             ('Tokyo', 5, (SELECT country_id FROM countries WHERE name = 'Japan')),
